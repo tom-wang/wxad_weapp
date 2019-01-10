@@ -1,0 +1,43 @@
+<div id="container" style="height:100%">
+  <div id="iSlider">
+    <ul class="islider-outer" style="height: 790px; width: 1440px; margin: 0px; padding: 0px; list-style: none; cursor: pointer;">
+      <li class="islider-dom" style="height: 790px; width: 1440px; transform: translateZ(0px) translateX(-1440px);"></li>
+      <li class="islider-dom" style="height: 790px; width: 1440px; transform: translateZ(0px) translateX(0px);">
+        <div class="page page1" style="background-image: url(&quot;http://wxsnsdythumb.wxs.qq.com/109/20204/snsvideodownload?m=f6ffb9274e8e7a767c63a24ec323eea2&amp;filekey=30340201010420301e02016d040253480410f6ffb9274e8e7a767c63a24ec323eea2020302351a040d00000004627466730000000131&amp;hy=SH&amp;storeid=32303138313232353034343133373030303334336637313336666664393330333561333230613030303030303664&amp;bizid=1023&quot;); background-size: auto 790px; background-position: center center;">
+          <div class="swipe-right"></div>
+        </div>
+      </li>
+      <li class="islider-dom" style="height: 790px; width: 1440px; transform: translateZ(0px) translateX(1440px);">
+        <div class="page page1" style="background-image: url(&quot;http://wxsnsdythumb.wxs.qq.com/109/20204/snsvideodownload?m=cf7b14d71264e223cd8179192fee2dd0&amp;filekey=30340201010420301e02016d040253480410cf7b14d71264e223cd8179192fee2dd0020301c40a040d00000004627466730000000131&amp;hy=SH&amp;storeid=32303138313232353034343134353030303064326537313336666664393337303561333230613030303030303664&amp;bizid=1023&quot;); background-size: auto 790px; background-position: center center;">
+          <div class="swipe-right"></div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="app__area">
+    <img class="app__icon" src="http://temp.im/100x100/" alt=""></img>
+    <div class="app__name">应用名称</div>
+  </div>
+
+  <div class="download" id="Jdl" style="transform-origin: center center 0px; transform: scale(1.56746);">
+    <!--想自定义颜色直接写 style-->
+    <a class="ui-button " id="download" href="javascript:;">
+      <i class="icon-loading" style="display:none;"></i>
+      <span class="download-txt">下载应用</span>
+    </a>
+    <!--<a class="ui-button ui-button_disabled" href="#"><i class="icon-loading"></i>下载中，稍后提示安装</a>-->
+    <p>
+      <span style="margin-right: 15px;">大小:</span>
+      <span>
+        <i class=""></i>来自</span>
+    </p>
+  </div>
+  <ul class="islider-dot-wrap" style="transform-origin: center center 0px; transform: scale(1.56746);">
+    <li class="islider-dot active" index="0"></li>
+    <li class="islider-dot" index="1"></li>
+    <li class="islider-dot" index="2"></li>
+    <li class="islider-dot" index="3"></li>
+    <li class="islider-dot" index="4"></li>
+  </ul>
+</div>
