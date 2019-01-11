@@ -13,3 +13,52 @@ page {
   left: 50%;
   transform: translate3d(-50%, 0, 0);
 }
+
+.app__area {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  height: 50px;
+}
+
+.app__area image {
+  width: 50px;
+  height: 50px;
+}
+
+.app__name {
+    overflow: hidden;
+    min-width: 200px;
+    font-size: 18px;
+    padding-top: 10px;
+    color: #050606;
+}
+
+.download {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 1.8rem;
+  text-align: center;
+}
+.download a {
+  display: inline-block;
+  font-size: 18px;
+  width: 70%;
+  line-height: 50px;
+  border-radius: 8px;
+  background-clip: padding-box;
+  background-color: #06be04;
+  color: #fff;
+}
+.download a.disabled {
+  background-color: #cacaca;
+}
+
+.download p {
+  display: block;
+  text-align: center;
+  width: 100%;
+  font-size: 14px;
+  color: #222;
+}

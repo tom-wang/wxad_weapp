@@ -15,14 +15,16 @@ Page({
     indicatorDots: true,
     autoplay: false,
     interval: 3000,
-    duration: 500
+    duration: 500,
+    platform: ''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    const app = getApp()
+    this.data.platform = app.globalData.systemInfo.platform
   },
 
   /**
@@ -36,7 +38,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    
   },
 
   /**
