@@ -24,14 +24,16 @@ Page({
    */
   onLoad: function (options) {
     const app = getApp()
-    this.data.platform = app.globalData.systemInfo.platform
+    this.setData({
+      platform: app.globalData.systemInfo.platform
+    })
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    console.log('onReady')
   },
 
   /**
