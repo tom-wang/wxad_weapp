@@ -1,4 +1,5 @@
 // pages/index/index.js
+// 生命周期https://developers.weixin.qq.com/miniprogram/dev/framework/app-service/page.html#%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F
 Page({
 
   /**
@@ -22,7 +23,12 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
+  loadCount: 0,
+  loadQuery: {},
   onLoad: function (options) {
+    this.loadCount++
+    this.loadQuery = options
+    console.log(options)
     const app = getApp()
     this.setData({
       platform: app.globalData.systemInfo.platform
@@ -31,16 +37,25 @@ Page({
 
   /**
    * 生命周期函数--监听页面初次渲染完成
+   * 冷启动时会执行，热启动时不执行
    */
   onReady: function () {
     console.log('onReady')
+    //冷启动，数据上报
+    this.reportPV(false)
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
+  showCount: 0,
   onShow: function () {
-    
+    console.log('onShow')
+    this.showCount++
+    if (this.showCount > this.loadCount) {
+      //热启动，数据上报
+      this.reportPV(true)
+    }
   },
 
   /**
@@ -76,5 +91,18 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  reportPV: function(isHot) {
+    //
+    const type = isHot ? 1 : 2
+    const app = getApp()
+    const os = app.globalData.systemInfo.platform
+    const versions = app.globalData.systemInfo.version.replace(/\./g, '')
+    const networkType = app.globalData.networkType
+    const url = `https://mp.weixin.qq.com/tp/datacenter/report?cmd=report&os=${os}&versions=${versions}&uin=&aid=&tid=&traceid=${Date.now()}&engine=&source=${networkType}&key=&id=900001&type=${type}&page_type=10000&_=${Date.now()}`
+    wx.request({
+      url
+    })
   }
 })
