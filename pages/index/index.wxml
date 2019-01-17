@@ -17,7 +17,7 @@
       <div class="app__name">趣头条</div>
   </div>
   <div class="download">
-    <a wx:if="{{'android'==platform}}" href="https://mp.weixin.qq.com/tp/ad_detail_info?page_key=b3844bc1fe9d48d09ae101ad6d4dd1faac7b916098793e4a5629415609c535ad7b44d55c01c2addfe8410f28ada2b4e8&auto=1">下载应用</a>
+    <a wx:if="{{'android'==platform}}" href="https://mp.weixin.qq.com/tp/ad_detail_info?page_key=b3844bc1fe9d48d09ae101ad6d4dd1faac7b916098793e4a5629415609c535ad7b44d55c01c2addfe8410f28ada2b4e8&auto=1" bindtap="onTapDownloadBtn">下载应用</a>
     <a wx:else class="disabled" href="javascript:;">该应用目前仅支持Android平台</a>
     <p>
         <span style="margin-right: 15px;">大小:17.5 MB</span>
